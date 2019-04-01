@@ -8,7 +8,7 @@ net = cv2.dnn.readNetFromTensorflow(model_path, config_path)
 conf_threshold = 0.7
 
 # initialize video source, default 0 (webcam)
-video_path = 0
+video_path = 1
 cap = cv2.VideoCapture(video_path)
 
 frame_count, tt = 0, 0
