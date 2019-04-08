@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CADBDE"
+    android:orientation="vertical"
     tools:context=".EmployeeAttendanceActivity">
 
     <LinearLayout
@@ -14,28 +15,34 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/textENO"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EmployeeENO"
-            android:textSize = "25dp"/>
+            android:paddingLeft="10dp"
+            android:text="근태현황"
+            android:textSize="25dp" />
 
         <Spinner
+            android:layout_marginLeft="80dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/monthSpinner">
         </Spinner>
 
-        <TextView
-            android:id="@+id/textView2"
+        <Button
+            android:id="@+id/inquiryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="50dp"
-            android:text="근태현황"
-            android:textSize = "25dp"
-            />
-
+            android:text="조회"
+            android:layout_marginLeft="20dp"/>
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/monthListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:dividerHeight="10dp"
+        />
 
 </LinearLayout>

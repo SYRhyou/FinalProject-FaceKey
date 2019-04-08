@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
                             if(success){
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                Toast.makeText(LoginActivity.this, (idText.getText().toString())+"님 환영합니다",Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, (idText.getText().toString())+"님 환영합니다",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, EmployeeActivity.class);
                                 intent.putExtra("ENO", idText.getText().toString());
                                 LoginActivity.this.startActivity(intent);

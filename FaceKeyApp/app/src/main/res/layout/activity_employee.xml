@@ -46,7 +46,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/checkListView"
+        android:id="@+id/noticeListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
@@ -56,9 +56,5 @@
 
     </ListView>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="근태현황"/>
 
 </LinearLayout>

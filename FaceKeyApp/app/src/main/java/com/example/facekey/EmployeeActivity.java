@@ -40,7 +40,7 @@ public class EmployeeActivity extends AppCompatActivity {
 
         new BackgroundTask().execute();
 
-        checkListView = (ListView) findViewById(R.id.checkListView);
+        checkListView = (ListView) findViewById(R.id.noticeListView);
         noticeList = new ArrayList<Notice>();
 
         noticeAdapter = new NoticeListAdapter(getApplicationContext(), noticeList);
@@ -51,11 +51,14 @@ public class EmployeeActivity extends AppCompatActivity {
         ENO = intent.getStringExtra("ENO");
         textEno.setText(ENO);
 
+
         checkButton = (Button)findViewById(R.id.checkButton);
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EmployeeActivity.this, EmployeeAttendanceActivity.class);
+                intent.putExtra("ENO", textEno.getText().toString());
+
                 EmployeeActivity.this.startActivity(intent);
             }
         });

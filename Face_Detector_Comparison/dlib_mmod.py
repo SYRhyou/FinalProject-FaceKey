@@ -1,4 +1,5 @@
-import cv2, time, dlib
+import cv2, time
+import dlib.cuda as dlib;
 
 # load model
 detector = dlib.cnn_face_detection_model_v1('models/mmod_human_face_detector.dat')
